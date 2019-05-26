@@ -1,2 +1,2 @@
 # fun-with-orm
-arbitrary attribute assignment for objects
+Demostration for arbitrary attribute assignment for objects
