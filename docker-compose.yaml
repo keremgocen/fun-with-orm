@@ -2,9 +2,9 @@ version: '3'
 
 services:
     web:
-        build: ./web
+        build: ./webapp
         volumes:
-            - ./web:/code
+            - ./webapp:/src
         ports:
-            - "80:5000"
-        command: python app.py
+            - "5000:5000"
+        command: flask run
