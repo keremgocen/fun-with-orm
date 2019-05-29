@@ -43,7 +43,7 @@ def add_user():
     return jsonify(u.json_rep()), 201
 
 
-@app.route("/update",  methods=['POST'])
+@app.route("/update",  methods=['PATCH'])
 def update_user():
     req_data = request.get_json()
     if req_data is None:
