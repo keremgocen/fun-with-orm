@@ -40,7 +40,7 @@ def add_user():
     db_session.add(u)
     db_session.commit()
 
-    return jsonify(u.json_rep())
+    return jsonify(u.json_rep()), 201
 
 
 @app.route("/update",  methods=['POST'])

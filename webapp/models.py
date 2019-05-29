@@ -18,10 +18,8 @@ class User(Base):
         self.email = email
 
     def assign_properties(self, **kwargs):
-        print(','.join('{0}={1!r}'.format(k, v) for k, v in kwargs.items()))
         for prop, val in kwargs.items():
             if hasattr(self, prop):
-                print("updating property {0}={1}".format(prop, val))
                 setattr(self, str(prop), val)
 
     def json_rep(self):
