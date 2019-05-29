@@ -19,8 +19,11 @@ class User(Base):
 
     def assign_properties(self, **kwargs):
         for prop, val in kwargs.items():
-            if hasattr(self, prop):
-                setattr(self, str(prop), val)
+            if prop in ["updated_at", "deleted_at", "created_at"]:
+                continue
+            else:
+                if hasattr(self, prop):
+                    setattr(self, str(prop), val)
 
     def json_rep(self):
         data = {

@@ -13,12 +13,12 @@ def shutdown_session(exception=None):
     db_session.remove()
 
 
-@app.route("/users")
+@app.route("/api/v1/users")
 def hello():
     return jsonify([x.json_rep() for x in User.query.all()])
 
 
-@app.route("/create", methods=['POST'])
+@app.route("/api/v1/create", methods=['POST'])
 def add_user():
     req_data = request.get_json()
     if req_data is None:
@@ -43,7 +43,7 @@ def add_user():
     return jsonify(u.json_rep()), 201
 
 
-@app.route("/update",  methods=['PATCH'])
+@app.route("/api/v1/update",  methods=['PATCH'])
 def update_user():
     req_data = request.get_json()
     if req_data is None:
