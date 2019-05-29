@@ -6,5 +6,5 @@ services:
         volumes:
             - ./webapp:/src
         ports:
-            - "5000:5000"
-        command: flask run
+            - "80:5000"
+        command: python app.py
