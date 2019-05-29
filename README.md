@@ -18,6 +18,8 @@ Demostration for arbitrary attribute assignment for objects
 
 ### Routes
 
+#### List all users:
+
 ```
 GET /api/v1/users/
 ```
